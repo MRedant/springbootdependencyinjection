@@ -24,6 +24,7 @@ public class TaxApplication implements CommandLineRunner{
     public void run(String... args) throws Exception {
         TaxCalculator taxCalculator = applicationContext.getBean(TaxCalculator.class);
         BigDecimal yearIncome = new BigDecimal(40000);
-        System.out.printf("\n\n\nThe tax you have to pay : $ %.2f\n\n\n",taxCalculator.calculateTaxesOnYearIncome(yearIncome).doubleValue());
+        System.out.printf("\n\n\nThe tax you have to pay : $ %.2f\n\n\n",
+                taxCalculator.calculateTaxesOnYearIncome(yearIncome).doubleValue());
     }
 }
